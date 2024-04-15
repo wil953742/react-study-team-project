@@ -1,10 +1,17 @@
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import AppLayout from './layout/AppLayout';
+import Homepage from './pages/Homepage/Homepage';
+import NotFoundPage from './pages/NotFound/NotFoundPage';
 
 function App() {
   return (
-    <div className="App">
-      <p>다시 살렸습니다ㅠㅠ새로운 develop</p>
-    </div>
+    <Routes>
+      <Route path="/" element={<AppLayout />}>
+        <Route index element={<Homepage />} />
+      </Route>
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
   );
 }
 
