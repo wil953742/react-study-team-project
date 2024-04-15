@@ -1,0 +1,9 @@
+/* color */
+:root{
+  --main-font-color: #121212;
+  --main-background-color:#fff;
+  --key-color:#f8a608;
+  --button-hover-color:#f27f05;
+  --color-darkGray: #333333;
+  --color-gray:#848484;
+}
