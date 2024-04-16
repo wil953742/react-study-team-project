@@ -12,6 +12,7 @@ const AppLayout = () => {
     <Box
       component="section"
       sx={{ 
+        minWidth: '320px',
         minHeight:"100vh",
         fontFamily:"'Spoqa Han Sans Neo', sans-serif"
       }}
