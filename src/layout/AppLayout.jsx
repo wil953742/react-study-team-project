@@ -5,7 +5,7 @@ import { Box, Container } from '@mui/material';
 
 import Header from './components/Header';
 
-const maxWidth = "xl";
+const maxWidth = "";
 
 const AppLayout = () => {
   return (
@@ -18,9 +18,12 @@ const AppLayout = () => {
       }}
     >
       <Header />
-      <Container 
-        maxWidth={maxWidth}
+      <Box component="section"
         sx={{
+          paddingTop: {
+            xs:'70px',
+            md:'135px'
+          },
           // 작업 후 삭제 예정
           border: {
             xs: "1px solid green",
@@ -30,7 +33,7 @@ const AppLayout = () => {
         }}
       >
         <Outlet />
-      </Container>
+      </Box>
       <footer>
         <Container maxWidth="xl">
         footer
