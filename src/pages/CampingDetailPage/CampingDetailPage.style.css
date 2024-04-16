@@ -1,3 +1,8 @@
-.detailpage{
-    font-size: 100px;
+.camping-detail-main{
+    margin-top: 150px;
+    border: none;
+}
+
+.img{
+    height: 500px;
 }
