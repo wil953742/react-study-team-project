@@ -10,10 +10,24 @@ const fetchCampingDetail = (contentId) => {
   );
 };
 
-export const useCampingDetailQuery = (contentId) => {
+export const useCampingDetailQuery = (pageNo) => {
   return useQuery({
-    queryKey: ["camping_detail", contentId],
-    queryFn: () => fetchCampingDetail(contentId),
+    queryKey: ["camping_detail", pageNo],
+    queryFn: () => fetchCampingDetail(pageNo),
     select: (result) => result.data.response.body.items
+  });
+};
+
+const fetchCampingKeyword = (keyword) => {
+  return apiGocamping.get(
+    `searchList?keyword=${encodeURI(keyword)}&serviceKey=${API_KEY}&${PARAMS}`
+  );
+};
+
+export const useCampingKeywordQuery = (keyword) => {
+  return useQuery({
+    queryKey: ["camping", keyword],
+    queryFn: () => fetchCampingKeyword(keyword),
+    select: (result) => result.data.response?.body?.items?.item
   });
 };
