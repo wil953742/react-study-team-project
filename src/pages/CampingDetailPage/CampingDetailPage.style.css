@@ -1,3 +1,11 @@
+.loading_wrap {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .camping-detail-main{
     margin-top: 150px;
     border: none;
